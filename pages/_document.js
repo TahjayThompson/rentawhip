@@ -1,15 +1,18 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+const gtag= 'G-SC64X5RNW0';
 
 class MyDocument extends Document {
 
- 
   render() {
     return (
       <Html lang="en">
           <Head>
+          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+          <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+          <meta name="theme-color" content="#ffffff"/>
           <script
             async
-            src={`https://www.googletagmanager.com/gtag/js?id=G-M2GFWEF7NY`}
+            src={`https://www.googletagmanager.com/gtag/js?id='G-SC64X5RNW0'`}
           />           
           <script
             dangerouslySetInnerHTML={{
@@ -17,45 +20,31 @@ class MyDocument extends Document {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'G-M2GFWEF7NY', {
+                gtag('config', 'G-SC64X5RNW0', {
                   page_path: window.location.pathname,
                 });
             `,
             }}
           />
-                    <link
-            rel="prefetch"
-            href='/font/OpenSans/OpenSans-ExtraBold.ttf'
-            as='font'
-            crossOrigin="anonymous"
-            type="font/ttf"
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id='AW-11063925737'`}
+          />           
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'AW-11063925737', {
+                  page_path: window.location.pathname,
+                });
+            `,
+            }}
           />
-
-            <link
-            rel="prefetch"
-            href='/font/Roboto/Roboto-Regular.ttf'
-            as='font'
-            crossOrigin="anonymous"
-            type="font/ttf"
-          />
-          <link
-            rel="prefetch"
-            href='/font/Roboto/Roboto-Bold.ttf'
-            as='font'
-            crossOrigin="anonymous"
-            type="font/ttf"
-          />
-          <link
-            rel="prefetch"
-            href='/font/Roboto/Roboto-Medium.ttf'
-            as='font'
-            crossOrigin="anonymous"
-            type="font/ttf"
-          />
-<meta name="google-site-verification" content="B8fTeI8B7k6H8GLsUcoph0ZwAjPqCd2YB8l07HQJgec" />        
-                    
+    
         </Head>     
-        <body>
+        <body className=" snap-y snap-mandatory h-screen overflow-y-scroll theme-purple ">
           
           <Main />
           <NextScript />

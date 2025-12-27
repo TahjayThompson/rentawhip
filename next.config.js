@@ -1,35 +1,11 @@
+const path = require('path');
+
 module.exports = {
-  optimizeFonts: true,
-  swcMinify: true,
-  images:{
-    formats: ['image/avif', 'image/webp'],
-    domains: ['https://image.shields.io/badge'],
+  webpack: (config) => {
+    config.resolve.alias['@components'] = path.join(__dirname, 'components');
+    return config;
   },
-  reactStrictMode: true,
-  pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js','html'],
- 
- 
-  webpack(config, options) {
-    config.module.rules.push({
-      test: /\.mdx?$/,
-      use: [
-        options.defaultLoaders.babel,
-        {
-          loader: '@mdx-js/loader',
-          /** @type {import('@mdx-js/loader').Options} */
-          options: {
-         
-          },
-        }
-      ]
-    })
-
-    return config
-  }
-}
-
-
-
-
-
-
+  images: {
+    domains: ['images.unsplash.com'], // Add the domain here
+  },
+};

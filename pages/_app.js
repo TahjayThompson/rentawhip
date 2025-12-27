@@ -1,11 +1,17 @@
+// pages/_app.js
 import '../styles/globals.css';
-import Layout from "../comp/Layout";
+import { useRouter } from 'next/router';
+
 function MyApp({ Component, pageProps }) {
-  return(
-      <Layout>
+  const router = useRouter();
+
+  return (
+    <>
+      <div className="container mx-auto px-4 py-8">
         <Component {...pageProps} />
-      </Layout>
-  )
+      </div>
+    </>
+  );
 }
 
 export default MyApp;
